@@ -1,91 +1,78 @@
 /* Challenge 2: Use w3SchoolsMockUp.png to help you write the necessary CSS rules.
    Hint: Remember all the fundamental CSS rules when working with flexboxes */
 /* Reset/Base Styles */
-body {
-    margin: 0;
-    font-family: sans-serif; /* A basic readable font */
+/* 全局重置（清除默认边距/内边距，统一盒模型） */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* --- Global Styles --- */
-
-.header, .footer {
-    background-color: #4CAF50; /* Dark green background */
-    color: white;
-    padding: 10px 15px;
-    font-weight: bold;
+/* 顶部栏：Flex横向分布，两端对齐 */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #fff; /* 顶部栏背景为白色 */
+  font-size: 18px;
 }
 
-/* --- Header Layout (Flexbox 1) --- */
-
-.header {
-    /* Set the header to be a flex container */
-    display: flex;
-    /* Space out the logo and the navigation bar */
-    justify-content: space-between;
-    /* Vertically align items in the center */
-    align-items: center;
+/* 导航栏：Flex横向分布，背景为绿色 */
+.navbar {
+  display: flex;
+  background-color: #4CAF50; /* 导航栏绿色 */
+}
+.navbar a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  flex: 1; /* 让每个导航项均分宽度 */
+  text-align: center;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-.header-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0 15px; /* Spacing between the top links */
-    /* Make the top links bold to match the image */
-    font-weight: bold; 
-    font-size: 1.1em;
+/* 主体区域：Flex横向分布（侧边栏+内容区） */
+.main-container {
+  display: flex;
+  min-height: calc(100vh - 120px); /* 自适应高度（减去顶部/底部栏高度） */
 }
 
-/* --- Main Content Layout (Flexbox 2) --- */
-
-.main-wrapper {
-    /* Set the main content area to be a flex container */
-    display: flex;
-    /* Ensure it takes up the full viewport height minus header/footer */
-    min-height: calc(100vh - 100px); /* Adjust '100px' based on actual header/footer heights */
-}
-
-/* --- Sidebar Styles --- */
-
+/* 侧边栏：固定宽度，背景为浅灰 */
 .sidebar {
-    /* This makes the sidebar take up a fixed width */
-    width: 200px; 
-    border-right: 1px solid #ccc; /* Separator line on the right */
-    padding: 10px 0;
-    /* Make this section scrollable if the content is too long */
-    overflow-y: auto; 
+  width: 150px;
+  background-color: #f1f1f1;
+  padding: 16px 0;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.sidebar li:hover {
+  background-color: #ddd;
 }
 
-.sidebar p {
-    padding: 5px 15px;
-    margin: 0; /* Remove default paragraph margins */
-    color: #4CAF50; /* Dark green text color for links */
-    font-size: 1em;
-}
-
-/* --- Content Area Styles --- */
-
+/* 内容区：Flex占满剩余空间，居中对齐 */
 .content {
-    /* Use flex-grow to make the content area take up the remaining space */
-    flex-grow: 1; 
-    padding: 20px;
-    background-color: white;
-    /* Arrange HTML and Sample Code horizontally if needed, 
-       but based on the image, they are just side-by-side text blocks */
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start; /* Align text to the top */
+  flex: 1; /* 占满主体区域剩余宽度 */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
 }
 
-.content h1 {
-    font-size: 3em;
-}
-
-/* --- Footer Styles --- */
-
+/* 底部栏：背景绿色，文字居中 */
 .footer {
-    /* Use padding to create a visually separated band */
-    padding: 5px 15px; 
-    text-align: center;
-    font-size: 0.8em;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
-
