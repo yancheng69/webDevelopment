@@ -1,76 +1,91 @@
 /* Challenge 2: Use w3SchoolsMockUp.png to help you write the necessary CSS rules.
    Hint: Remember all the fundamental CSS rules when working with flexboxes */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Reset/Base Styles */
+body {
+    margin: 0;
+    font-family: sans-serif; /* A basic readable font */
 }
 
-/* General container flex rule */
-.container {
-  display: flex;
+/* --- Global Styles --- */
+
+.header, .footer {
+    background-color: #4CAF50; /* Dark green background */
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
 }
 
-/* Header */
-#top-header {
-  text-align: center;
-  padding: 10px;
-  border-bottom: 1px solid rgb(160, 160, 160);
+/* --- Header Layout (Flexbox 1) --- */
+
+.header {
+    /* Set the header to be a flex container */
+    display: flex;
+    /* Space out the logo and the navigation bar */
+    justify-content: space-between;
+    /* Vertically align items in the center */
+    align-items: center;
 }
 
-/* Navigation bar */
-#main-nav {
-  background-color: #009900;
-  color: white;
-  justify-content: space-around;
-  padding: 10px 0;
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px; /* Spacing between the top links */
+    /* Make the top links bold to match the image */
+    font-weight: bold; 
+    font-size: 1.1em;
 }
 
-#main-nav div {
-  flex: 1;
-  text-align: center;
+/* --- Main Content Layout (Flexbox 2) --- */
+
+.main-wrapper {
+    /* Set the main content area to be a flex container */
+    display: flex;
+    /* Ensure it takes up the full viewport height minus header/footer */
+    min-height: calc(100vh - 100px); /* Adjust '100px' based on actual header/footer heights */
 }
 
-/* Content area layout (sidebar + main) */
-#content-area {
-  display: flex;
-  height: 400px;
+/* --- Sidebar Styles --- */
+
+.sidebar {
+    /* This makes the sidebar take up a fixed width */
+    width: 200px; 
+    border-right: 1px solid #ccc; /* Separator line on the right */
+    padding: 10px 0;
+    /* Make this section scrollable if the content is too long */
+    overflow-y: auto; 
 }
 
-/* Sidebar */
-#sidebar {
-  width: 150px;
-  border-right: 1px solid #aaaaaa;
-  padding: 10px;
+.sidebar p {
+    padding: 5px 15px;
+    margin: 0; /* Remove default paragraph margins */
+    color: #4CAF50; /* Dark green text color for links */
+    font-size: 1em;
 }
 
-#sidebar ul {
-  list-style: none;
+/* --- Content Area Styles --- */
+
+.content {
+    /* Use flex-grow to make the content area take up the remaining space */
+    flex-grow: 1; 
+    padding: 20px;
+    background-color: white;
+    /* Arrange HTML and Sample Code horizontally if needed, 
+       but based on the image, they are just side-by-side text blocks */
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align text to the top */
 }
 
-#sidebar li {
-  margin: 8px 0;
+.content h1 {
+    font-size: 3em;
 }
 
-/* Main content columns */
-#main-content {
-  flex: 1;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-}
+/* --- Footer Styles --- */
 
-.center-col {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-/* Footer */
-#footer {
-  background-color: #009900;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 10px;
+.footer {
+    /* Use padding to create a visually separated band */
+    padding: 5px 15px; 
+    text-align: center;
+    font-size: 0.8em;
 }
 
