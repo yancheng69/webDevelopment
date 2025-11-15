@@ -18,43 +18,51 @@
         file info.txt contains the information to place inside each container BUT also contains information to help you identify the 
         necessary containers to create.  
     -->
-    <header class="header">
-        <div class="header-logo">w3Schools.com</div>
-        <nav class="header-nav">
-            <a href="#">Tutorial</a>
-            <a href="#">Reference</a>
-            <a href="#">Example</a>
-            <a href="#">Exercises</a>
-            <a href="#">Certification</a>
-        </nav>
-    </header>
+  <!-- 顶部栏 -->
+  <header class="topbar">
+    <div class="topbar-left">w3Schools.com</div>
+    <div class="topbar-right">THE WORLD'S LARGEST WEB DEVELOPER SITE</div>
+  </header>
 
-    <div class="main-wrapper">
-        <aside class="sidebar">
-            <p>Learn HTML</p>
-            <p>Learn CSS</p>
-            <p>Learn Bootstrap</p>
-            <p>Learn W3.CSS</p>
-            <p>Learn Colors</p>
-            <p>Learn Icons</p>
-            <p>Learn Graphics</p>
-            <p>Learn How To</p>
-            <p>Learn Sass</p>
-        </aside>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <a href="#">Tutorial</a>
+    <a href="#">Reference</a>
+    <a href="#">Example</a>
+    <a href="#">Exercises</a>
+    <a href="#">Certification</a>
+  </nav>
 
-        <main class="content">
-            <h1>HTML</h1>
-            <h1>Sample Code</h1>
-        </main>
-    </div>
+  <!-- 主体区域（Flex容器：侧边栏 + 内容区） -->
+  <main class="main-container">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <ul>
+        <li>Learn HTML</li>
+        <li>Learn CSS</li>
+        <li>Learn Bootstrap</li>
+        <li>Learn W3.CSS</li>
+        <li>Learn Colors</li>
+        <li>Learn Icons</li>
+        <li>Learn Graphics</li>
+        <li>Learn How To</li>
+        <li>Learn Sass</li>
+      </ul>
+    </aside>
 
-    <footer class="footer">
-        Copyright 1999-2020 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.
-    </footer>
+    <!-- 内容区 -->
+    <section class="content">
+      <h1>HTML</h1>
+      <h1>Sample Code</h1>
+    </section>
+  </main>
 
-<script src="script.js"></script>
-</body>
-</html>
+  <!-- 底部栏 -->
+  <footer class="footer">
+    Copyright 1999-2020 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.
+  </footer>
+
+  <script src="script.js"></script>
 
     
   </body>
