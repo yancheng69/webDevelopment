@@ -16,17 +16,17 @@ function area() {
   let width = document.getElementById("width").value;
   let output = document.getElementById("output");
 
-  if (length <= 0 || width <= 0) {
+ 
+
+
+/* Challenge 2:  Create the function for Challenge 1 scenario */
+ if (length <= 0 || width <= 0) {
     output.innerHTML = "Inappropriate measurement";
   } else {
     let area = length * width;
     output.innerHTML = "Area = " + area;
   }
 }
-
-
-/* Challenge 2:  Create the function for Challenge 1 scenario */
-
 
 
 /* Challenge 3:  Complete the function for Pets Challenge on pets.html.  
