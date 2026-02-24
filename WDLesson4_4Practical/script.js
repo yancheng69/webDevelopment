@@ -6,6 +6,12 @@
 */
 let correct;
 function generateProblem(){
+  let num1 = Math.floor(Math.random() * 21);
+  let num2 = Math.floor(Math.random() * 21);
+
+
+
+  
 
 }
 
@@ -20,7 +26,17 @@ function generateProblem(){
        4) Display msg in the output
 */
 function checkProblem(){
-
+  let userResponse = parseFloat(document.getElementById("response").value);
+  let output = document.getElementById("output");
+  let msg = "";
+  
+  if (userResponse === correct) {
+    msg = "Correct!";
+    output.innerHTML = msg + "<br><img src='correct.webp' alt='Correct'>";
+  } else {
+    msg = `Incorrect. The answer is ${correct}.`;
+    output.innerHTML = msg + "<br><img src='incorrect.avif' alt='Incorrect'>";
+  }
 }
 
 /* Challenge Bonus: Could you randomize the operations so it is not only addition.  
