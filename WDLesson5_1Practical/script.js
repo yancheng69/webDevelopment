@@ -27,9 +27,8 @@ Year N: $xxxxxx
 
     let amount = principal * Math.pow(1 + rate / compound, compound * years);
 
-       build += "Year " + year + ": $" + A.toFixed(2) + "<br>";
+       build += "Year " + Year + ": $" + A.toFixed(2) + "<br>";
   }
   }
 
   document.getElementById("output").innerHTML = build;
-}
