@@ -4,9 +4,9 @@
 //Challenge 1: Add the appropriate images to each array below from the list above.
 //Challenge 2: Add appropriate prices for each food in their corresponding array.
 //Challenge 3: Add appropriate titles for each food in their corresponding array.  Use the image names as a hint for the food title.
-let meat_titles = [];
-let meats = [];
-let meat_prices = [];
+let meat_titles = ["Beef Tips", "Brisket", "Ribeye", "Steak"];
+let meats  =["beeftips.jpg", "brisket.jpg", "ribeye.jpg", "steak.jpg"];
+let meat_prices = [21.99,21.99,21.99,21.99];
 let seafood_titles = [];
 let seafood = [];
 let seafood_prices = [];
@@ -21,6 +21,14 @@ function init(){
   let d = document.getElementById("desserts");
   let build = ``;
   //Challenge 4:  Build cards for the meats. Place the build in the meat container. 
+for(let i=0; i < meats.length; i+=1){
+  build += '<div class="card">';
+  build += '  <h2> ${ meat_titles[i] } </h2>';
+  build += '  <img src="images/${ meats[i]}">';
+  build += '  <span>${meat_prices[i]}</span>';
+  build += '</div>';
+}
+output.innerHTML = build;
 
   //Challenge 5:  Build cards for the seafoods. Place the build in the seafood container.
 
