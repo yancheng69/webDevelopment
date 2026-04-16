@@ -20,13 +20,14 @@ async function init(){
                 <h2>${criminal.title}</h2>
                 <p>${criminal.sex}</p><br>
                 <p>${criminal.details}</p>
-                <a href="${criminal.url}" target="_blank">FBI Page</a><br>
-                <a target="_blank" 
-                   href="https://mozilla.github.io/pdf.js/web/viewer.html?file=${criminal.pdf}">
+                <a href="${criminal.url}" target="_blank">
+                   FBI Page
+                </a><br>
+                <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=${criminal.pdf}" target="_blank" >
                    View Poster
                 </a><br>
                 <img class="fit" src="${criminal.image}">
-      </div>`
+                </div>`
   }
 
 
