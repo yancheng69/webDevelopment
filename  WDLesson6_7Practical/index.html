@@ -14,7 +14,7 @@
           <h2>Filtering 311 Complaints</h2>
       </div>
     </div>
-    <div class="container subbanner">
+        <div class="container subbanner">
       <div>
         <p>This practical challenges students to provide various ways to filter  
           311 Service Requests (Complaints) retrieved from NYC Open Data.</p>
@@ -24,33 +24,20 @@
         <a class="button" target="_blank" href="https://jsoneditoronline.org/"> JSON Editor Online</a>
        </div>
     </div>
-    <div class="container">
-      <div id="leftPanel">
-        <!--Card below is the basic HTML to use for Challenge 1 and 3 -->
-        <div class="card">
-          <h3>Serach By Borough</h3>
-          <input type="text" id="borough" placeholder="Enter Borough">
-          <hr></hr>
-          <a class="button" onclick="filterByBorough()"> Search </a>
-        </div>
-        <!--Challenge 1: Create another UI in order to filter by zip code -->
-<div class="card">
-  <h3>Search By Zip Code</h3>
-  <input type="text" id="zip" placeholder="Enter Zip Code">
-  <hr>
-  <a class="button" onclick="filterByZip()"> Search </a>
-</div>
 
-        <!--Challenge 3: Create another UI in order to filter by complaint type -->
-<div class="card">
-  <h3>Search By Complaint Type</h3>
-  <input type="text" id="type" placeholder="Enter Complaint Type">
-  <hr>
-  <a class="button" onclick="filterByType()"> Search </a>
-</div
+  <div class="card">
+  <h3>Filter by Borough</h3>
+  <input type="text" id="borough" placeholder="Enter Borough">
+  <button onclick="filterByBorough()">Filter</button>
+  </div>
 
+  <div class="card">
+  <h3>Advanced Filter</h3>
+  <input type="text" id="zip" placeholder="Zip Code">
+  <input type="number" id="injured" placeholder="Injured">
+  <button onclick="advancedFilter()">Apply</button>
+  </div>
 
-      </div>
       <div class="card" id="rightPanel">
         <h1>311 Service Requests</h1>
         <div id="result"></div>
@@ -59,7 +46,8 @@
     </div>
 
     <div id="footer" class="container center">
-      <h3>Lesson 6.6 Practical</h3>
+      <h3>Lesson 6.7 Practical</h3>
     </div>  
-  </body>
+
+</body>
 </html>
