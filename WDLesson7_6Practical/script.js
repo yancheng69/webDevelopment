@@ -43,7 +43,6 @@ function accidentsByVehicle(){
   //Create the same functionality as for accidentsByBorough except you will be 
   // aggregating for the following vehicles, 'Sedan', 'Station Wagon/Sport Utility Vehicle', 
   // 'Taxi', 'Bus', 'Motorcycle' and other.  "Other" isn't a vehicle type but simply meant to capture all other vehicles. 
-function accidentsByVehicle(){
   let sedan = 0;
   let suv = 0;
   let taxi = 0;
@@ -90,4 +89,4 @@ function accidentsByVehicle(){
   displayChart(chartData, "chart", chartType);
 }
   
-}
+
